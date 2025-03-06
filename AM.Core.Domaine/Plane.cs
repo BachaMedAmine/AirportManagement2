@@ -11,7 +11,7 @@ namespace AM.Core.Domaine
         public DateTime ManufactureDate { get; set; }
 
 
-        [Key]
+       
         public int PlaneId { get; set; }
         public PlaneType MyPlaneType { get; set; }
 
