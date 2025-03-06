@@ -28,7 +28,8 @@ namespace AM.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.ApplyConfiguration(new PlaneConfig()); 
+            modelBuilder.ApplyConfiguration(new PlaneConfig());
+            modelBuilder.ApplyConfiguration(new FlightConfig()); // Appliquer FlightConfig
         }
 
 

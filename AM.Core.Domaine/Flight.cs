@@ -25,8 +25,8 @@ namespace AM.Core.Domaine
 
 
         [ForeignKey(nameof(MyPlane))] 
-        public int PlaneId { get; set; }
-        public Plane MyPlane { get; set; }
+        public int? PlaneId { get; set; }
+        public Plane? MyPlane { get; set; }
         public IList<Passenger> Passengers { get; set; }
 
         public override string ToString()

@@ -20,7 +20,7 @@ namespace AM.Data.Configurations
             builder.HasOne(f => f.MyPlane)
                     .WithMany(p => p.Flights)
                     .HasForeignKey(f => f.PlaneId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
