@@ -10,9 +10,9 @@ namespace AM.Core.Domaine
 {
     public class Passenger
     {
-        public int Id { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
+        //public int Id { get; set; }
+       
+        [DataType(DataType.Date,ErrorMessage ="error Date")]
         [Display(Name = "Date of Birth")]
         public DateTime BirthDate { get; set; }
 
@@ -21,20 +21,20 @@ namespace AM.Core.Domaine
         [StringLength(7, MinimumLength = 7, ErrorMessage = "Passport number must be exactly 7 characters.")]
         public string PassportNumber { get; set; }
 
-        [Required]
+        
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string EmailAddress { get; set; }
 
 
-        [Required]
+        
         [StringLength(25, MinimumLength = 3, ErrorMessage = "First name must be between 3 and 25 characters.")]
         public string FirstName { get; set; }
 
-        [Required]
+       
         [StringLength(25, MinimumLength = 3, ErrorMessage = "Last name must be between 3 and 25 characters.")]
         public string LastName { get; set; }
 
-        [Required]
+        
         [Phone(ErrorMessage = "Invalid phone number.")]
         public string TelNumber { get; set; }
         public int Age
