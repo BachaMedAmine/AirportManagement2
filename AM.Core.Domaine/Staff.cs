@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,8 +15,8 @@ namespace AM.Core.Domaine
 
 
 
-        [Required]
-        [Range(1, double.MaxValue, ErrorMessage = "Salary must be a positive value.")]
+        
+        [DataType(DataType.Currency, ErrorMessage = "Salary must be a currency.")]
         public double Salary { get; set; }
 
         public override string GetPassengerType()
