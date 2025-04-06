@@ -30,6 +30,14 @@ namespace AM.Data
 
             modelBuilder.ApplyConfiguration(new PlaneConfig());
             modelBuilder.ApplyConfiguration(new FlightConfig()); // Appliquer FlightConfig
+
+            //Héritage TPH : Table Passengers avec colonne IsTraveller
+            modelBuilder.Entity<Passenger>()
+                .HasDiscriminator<int>("IsTraveller")
+                .HasValue<Passenger>(0)
+                .HasValue<Traveller>(1)
+                .HasValue<Staff>(2);
+
         }
 
 
